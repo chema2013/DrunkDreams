@@ -4,26 +4,17 @@ This README would normally document whatever steps are necessary to get your app
 
 ### What is this repository for? ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+* T&T03 final task
+* v0.1
+* The game will be a 2D side scrolling platformer (similar to the original marioBros
 
-### How do I get set up? ###
+### Set Up ###
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+* Made in Unity
+* Using C#
+* Primary made for a Microsoft system
 
-### Contribution guidelines ###
+### Credits ###
 
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+* Jose Maria Pardo
+* Supervised by: Kevin Hagen "T&T3" (WinterSemester 2021/22)
