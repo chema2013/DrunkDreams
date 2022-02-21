@@ -456,9 +456,10 @@ GameObject:
   - component: {fileID: 212144107}
   - component: {fileID: 212144108}
   - component: {fileID: 212144109}
+  - component: {fileID: 212144110}
   m_Layer: 0
   m_Name: spin ball
-  m_TagString: Untagged
+  m_TagString: spinBall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -472,7 +473,7 @@ Transform:
   m_GameObject: {fileID: 212144106}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -934.3, y: 201, z: 0}
-  m_LocalScale: {x: 13.102884, y: 13.102884, z: 13.102884}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1987112970}
   m_RootOrder: 0
@@ -538,7 +539,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.0154284835, y: -0.10301387}
@@ -554,6 +555,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.1508384, y: 1.0901794}
   m_EdgeRadius: 0
+--- !u!114 &212144110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212144106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8653c1f15ce3b547b639a858423b51f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spinObject: {fileID: 1987112969}
 --- !u!1 &213799624
 GameObject:
   m_ObjectHideFlags: 0

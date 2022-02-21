@@ -20,6 +20,7 @@ TagManager:
   - upgradeB
   - upgradeA
   - woodenPlatform
+  - spinBall
   layers:
   - Default
   - TransparentFX

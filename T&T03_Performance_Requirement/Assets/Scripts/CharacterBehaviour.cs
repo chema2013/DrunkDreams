@@ -123,9 +123,19 @@ public class CharacterBehaviour : MonoBehaviour
             }
 
             //if the player has the upgrade they can perform the special movement/ shoot fireballs
-            if (Input.GetKey("e"))
+            if (Input.GetKeyDown("e"))
             {
+               GameObject ball = GameObject.FindWithTag("spinBall");
 
+               float positionX = transform.position.x + 5f;
+
+               float positionY = transform.position.y - 4f;
+
+               Vector3 position = new Vector3(positionX, positionY, 0f);
+
+            Instantiate(ball, position, Quaternion.identity); 
+
+            Debug.Log("fire!");
             }
 
         }
