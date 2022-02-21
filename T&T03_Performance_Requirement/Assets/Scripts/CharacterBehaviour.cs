@@ -179,6 +179,12 @@ public class CharacterBehaviour : MonoBehaviour
                 //disables second heart in the ui, showing that the player has one lives
                 hearts[1].SetActive(false);
 
+                //disables the first upgrate sptite in the ui, showing that the player doesn't have that upgrade
+                hearts[2].SetActive(false);
+
+                //disables the second upgrate sptite in the ui, showing that the player doesn't have that upgrade
+                hearts[3].SetActive(false);
+
                 //prints a message saying that the player lost the upgrade
                 Debug.Log("You lost the upgrade");
 
@@ -263,6 +269,12 @@ public class CharacterBehaviour : MonoBehaviour
             //enables second heart in the ui, showing that the player has two lives
             hearts[1].SetActive(true);
 
+            //enables the first upgrate sptite in the ui, showing that the player has that upgrade
+            hearts[2].SetActive(true);
+
+            //disables the second upgrate sptite in the ui, showing that the player has replaced it
+            hearts[3].SetActive(false);
+
             //prints message
             Debug.Log("picked up UpgradeA");
             
@@ -295,6 +307,12 @@ public class CharacterBehaviour : MonoBehaviour
 
             //enables second heart in the ui, showing that the player has two lives
             hearts[1].SetActive(true);
+
+            //enables the second upgrate sptite in the ui, showing that the player has that upgrade
+            hearts[3].SetActive(true);
+
+            //disables the first upgrate sptite in the ui, showing that the player has replaced it
+            hearts[2].SetActive(false);
 
             //prints message
             Debug.Log("picked up UpgradeB");
