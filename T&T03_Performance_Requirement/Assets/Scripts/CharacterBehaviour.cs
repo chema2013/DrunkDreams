@@ -152,6 +152,28 @@ public class CharacterBehaviour : MonoBehaviour
             points ++;
             Debug.Log("1 point");
         }
+
+        //checks if the player has collected the second srew type (medium one)
+        if(other.gameObject.CompareTag("screw2"))
+        {
+            //destoys the screw item so it can't be collected anymore
+            Destroy(other.gameObject);
+
+            //since is the first screw it gives five points to the player
+            points += 5;
+            Debug.Log("5 point");
+        }
+
+        //checks if the player has collected the second srew type (medium one)
+        if(other.gameObject.CompareTag("screw3"))
+        {
+            //destoys the screw item so it can't be collected anymore
+            Destroy(other.gameObject);
+
+            //since is the first screw it gives ten points to the player
+            points += 10;
+            Debug.Log("10 point");
+        }
     }
 
 
