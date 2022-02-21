@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class enemyB : MonoBehaviour
 {
+
+    //define explosion prefab as a variable
+    public GameObject prefap;
+
     //awake event searching the x value at the start of the game
     void Awake()
     {
@@ -40,5 +44,20 @@ public class enemyB : MonoBehaviour
     void Update()
     {
         
+    }
+
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        //if the fireball hits the enemy, it gets destroyed
+        if(other.gameObject.CompareTag("spinBall"))
+        {
+            //it spawns the explosion animation on top of the enemy
+            Vector3 fire = gameObject.transform.position;
+            Instantiate(prefap, fire, Quaternion.identity);
+
+            //then it destroys the enemy
+            Destroy(gameObject);
+        }
     }
 }

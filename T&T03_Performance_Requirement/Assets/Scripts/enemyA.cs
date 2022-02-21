@@ -6,6 +6,9 @@ public class enemyA : MonoBehaviour
 {
     //defines the speed of the enemy
     float enemySpeed = 2f;
+    
+    //define explosion prefab as a variable
+    public GameObject explosionPrefab;
 
 
     // Start is called before the first frame update
@@ -42,14 +45,12 @@ public class enemyA : MonoBehaviour
             Destroy(gameObject);
         }
 
-        GameObject spawn = GameObject.FindWithTag("explosion");
-
         //if the player hits the enemy by jumping on top of it, the enemy gets destroyed
         if(other.gameObject.CompareTag("character"))
         {
             //it spawns the explosion animation on top of the enemy
             Vector3 position = gameObject.transform.position;
-            Instantiate(spawn, position, Quaternion.identity);
+            Instantiate(explosionPrefab, position, Quaternion.identity);
 
             //then it destroys the enemy
             Destroy(gameObject);
