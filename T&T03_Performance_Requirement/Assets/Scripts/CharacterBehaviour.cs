@@ -23,6 +23,9 @@ public class CharacterBehaviour : MonoBehaviour
     //an int that defines the amount of hearts the character currently has
     public int health = 0;
 
+    //public variable where the score will be store
+    public static int points;
+
 
     //using the event Awake to define  the elements once the object is enable, at the start of the level
     void Awake()
@@ -134,6 +137,20 @@ public class CharacterBehaviour : MonoBehaviour
 
             //prints the phrase you died once the character died and the scene is reloaded
             Debug.Log("You died");
+        }
+
+
+        //three situations (the player collects three different types of srews)
+
+        //checks if the player has collected the first srew type (small one)
+        if(other.gameObject.CompareTag("screw1"))
+        {
+            //destoys the screw item so it can't be collected anymore
+            Destroy(other.gameObject);
+
+            //since is the first screw it gives one point to the player
+            points ++;
+            Debug.Log("1 point");
         }
     }
 

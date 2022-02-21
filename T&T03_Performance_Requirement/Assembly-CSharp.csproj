@@ -36,12 +36,13 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\CharacterBehaviour.cs" />
-     <Compile Include="Assets\Scripts\UiMovement.cs" />
      <Compile Include="Assets\Scripts\enemyA.cs" />
+     <Compile Include="Assets\Scripts\UiMovement.cs" />
      <Compile Include="Assets\Scripts\enemyB.cs" />
-     <Compile Include="Assets\Scripts\woodenPlatform.cs" />
+     <Compile Include="Assets\Scripts\CharacterBehaviour.cs" />
      <Compile Include="Assets\Scripts\explosion_behaviour.cs" />
+     <Compile Include="Assets\Scripts\woodenPlatform.cs" />
+     <Compile Include="Assets\Scripts\Score.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.20f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
@@ -610,34 +611,34 @@
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.20f1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-        <HintPath>C:\Users\josem\OneDrive\university\third semester\t&amp;t3\T&amp;T03_Performance_Requirement\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+        <HintPath>C:\Users\josem\OneDrive\university\third semester\t&amp;t3\ws21-22_t-t03_josepardo-finalproject\T&amp;T03_Performance_Requirement\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-        <HintPath>C:\Users\josem\OneDrive\university\third semester\t&amp;t3\T&amp;T03_Performance_Requirement\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
+        <HintPath>C:\Users\josem\OneDrive\university\third semester\t&amp;t3\ws21-22_t-t03_josepardo-finalproject\T&amp;T03_Performance_Requirement\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualStudio.Editor">
-        <HintPath>C:\Users\josem\OneDrive\university\third semester\t&amp;t3\T&amp;T03_Performance_Requirement\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
+        <HintPath>C:\Users\josem\OneDrive\university\third semester\t&amp;t3\ws21-22_t-t03_josepardo-finalproject\T&amp;T03_Performance_Requirement\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-        <HintPath>C:\Users\josem\OneDrive\university\third semester\t&amp;t3\T&amp;T03_Performance_Requirement\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+        <HintPath>C:\Users\josem\OneDrive\university\third semester\t&amp;t3\ws21-22_t-t03_josepardo-finalproject\T&amp;T03_Performance_Requirement\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-        <HintPath>C:\Users\josem\OneDrive\university\third semester\t&amp;t3\T&amp;T03_Performance_Requirement\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
+        <HintPath>C:\Users\josem\OneDrive\university\third semester\t&amp;t3\ws21-22_t-t03_josepardo-finalproject\T&amp;T03_Performance_Requirement\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-        <HintPath>C:\Users\josem\OneDrive\university\third semester\t&amp;t3\T&amp;T03_Performance_Requirement\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
+        <HintPath>C:\Users\josem\OneDrive\university\third semester\t&amp;t3\ws21-22_t-t03_josepardo-finalproject\T&amp;T03_Performance_Requirement\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-        <HintPath>C:\Users\josem\OneDrive\university\third semester\t&amp;t3\T&amp;T03_Performance_Requirement\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+        <HintPath>C:\Users\josem\OneDrive\university\third semester\t&amp;t3\ws21-22_t-t03_josepardo-finalproject\T&amp;T03_Performance_Requirement\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PlasticSCM.Editor">
-        <HintPath>C:\Users\josem\OneDrive\university\third semester\t&amp;t3\T&amp;T03_Performance_Requirement\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
+        <HintPath>C:\Users\josem\OneDrive\university\third semester\t&amp;t3\ws21-22_t-t03_josepardo-finalproject\T&amp;T03_Performance_Requirement\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-        <HintPath>C:\Users\josem\OneDrive\university\third semester\t&amp;t3\T&amp;T03_Performance_Requirement\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+        <HintPath>C:\Users\josem\OneDrive\university\third semester\t&amp;t3\ws21-22_t-t03_josepardo-finalproject\T&amp;T03_Performance_Requirement\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-        <HintPath>C:\Users\josem\OneDrive\university\third semester\t&amp;t3\T&amp;T03_Performance_Requirement\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+        <HintPath>C:\Users\josem\OneDrive\university\third semester\t&amp;t3\ws21-22_t-t03_josepardo-finalproject\T&amp;T03_Performance_Requirement\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
