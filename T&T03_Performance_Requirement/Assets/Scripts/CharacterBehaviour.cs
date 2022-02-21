@@ -26,6 +26,15 @@ public class CharacterBehaviour : MonoBehaviour
     //public variable where the score will be store
     public static int points;
 
+    //variable to indicate if the player has the upgradeA
+    bool hasUpgradeA;
+
+    //variable to indicate if the player has the upgradeA
+    bool hasUpgradeB;
+
+
+    private Vector3 newScale;
+
 
     //using the event Awake to define  the elements once the object is enable, at the start of the level
     void Awake()
@@ -98,6 +107,28 @@ public class CharacterBehaviour : MonoBehaviour
                     Debug.Log("dead");
                     SceneManager.LoadScene(0);
                 }
+
+
+        //checks if the has collected the upgrade A
+        if(hasUpgradeA == true)
+        {
+            //checks the health of the player and this happens if they didn't get another upgrade
+            if(health == 1)
+            {
+            //spawns a heart sprite on top of the screen, showing the character's health, this only happens if the character doesn't have a second heart
+            GameObject heart_ = GameObject.FindWithTag("heart");
+            
+            Vector3 position_ = new Vector3(20, 15, 0);
+            Instantiate(heart_, position_, Quaternion.identity);
+            }
+
+            //if the player has the upgrade they can perform the special movement/ shoot fireballs
+            if (Input.GetKey("e"))
+            {
+
+            }
+
+        }
     }
 
     //checks if the player has collided with another object
@@ -173,6 +204,57 @@ public class CharacterBehaviour : MonoBehaviour
             //since is the first screw it gives ten points to the player
             points += 10;
             Debug.Log("10 point");
+        }
+
+
+
+        //two situations for the upgrades pick ups
+
+        //checks if the player collided with the upgradeA sprite
+        if(other.gameObject.CompareTag("upgradeA"))
+        {
+            //destoys the upgrade item so it can't be collected anymore
+            Destroy(other.gameObject);
+
+            //changes the value of the upgrade bool to state that the player has the upgrade
+            hasUpgradeA = true;
+
+            //disables the  other upgrade, in case it was acquired
+            hasUpgradeB = false;
+
+            Debug.Log("picked up UpgradeA");
+            
+            if(health == 1)
+            {
+
+                newScale = new Vector3(2f, 2f, 2f);
+                
+                transform.localScale += newScale;
+                
+                //set the amount of hearts the character has, adds one because one heart has been added to his health (the upgrade add one more heart)
+                health += 1;
+            }
+        }
+
+        //checks if the player collided with the upgradeB sprite
+        if(other.gameObject.CompareTag("upgradeB"))
+        {
+            //destoys the upgrade item so it can't be collected anymore
+            Destroy(other.gameObject);
+
+            //changes the value of the upgrade bool to state that the player has the upgrade
+            hasUpgradeB = true;
+
+            //disables the  other upgrade, in case it was acquired
+            hasUpgradeA = false;
+
+            Debug.Log("picked up UpgradeB");
+            
+            if(health == 1)
+            {
+            //set the amount of hearts the character has, adds one because one heart has been added to his health (the upgrade add one more heart)
+            health += 1;
+            }
         }
     }
 

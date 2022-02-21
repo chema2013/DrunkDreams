@@ -17,7 +17,7 @@ public class woodenPlatform : MonoBehaviour
     void Update()
     {
         //check if the player is pressing the key "s" so the character could go throught the platform
-        if(Input.GetKey("s"))
+        if(Input.GetKeyDown("s"))
         {
             platform[0].SetActive(false);
         }
