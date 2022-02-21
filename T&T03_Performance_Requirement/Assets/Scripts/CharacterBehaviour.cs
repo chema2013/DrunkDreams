@@ -150,6 +150,25 @@ public class CharacterBehaviour : MonoBehaviour
                 Destroy(animations[0]);
                 animations[2].SetActive(true);
             }
+
+            //if the player collected the upgrade
+            if(health == 2)
+            {
+                //makes the player loose one heart
+                health --;
+                //disables the other upgrades
+                hasUpgradeA = false;
+                hasUpgradeB = false;
+
+                //prints a message saying that the player lost the upgrade
+                Debug.Log("You lost the upgrade");
+
+                 //define the values for the new scale
+                newScale = new Vector3(-2f, -2f, -2f);
+
+                //changes the scale of the player back to normal
+                transform.localScale += newScale;
+            }
         }
     }
 
@@ -224,11 +243,14 @@ public class CharacterBehaviour : MonoBehaviour
 
             Debug.Log("picked up UpgradeA");
             
+            //this happens if the player doesn't have another upgrade
             if(health == 1)
             {
 
+                //define the values for the new scale
                 newScale = new Vector3(2f, 2f, 2f);
-                
+
+                //changes the scale of the player
                 transform.localScale += newScale;
                 
                 //set the amount of hearts the character has, adds one because one heart has been added to his health (the upgrade add one more heart)
@@ -250,10 +272,18 @@ public class CharacterBehaviour : MonoBehaviour
 
             Debug.Log("picked up UpgradeB");
             
+            //this happens if the player doesn't have another upgrade
             if(health == 1)
             {
-            //set the amount of hearts the character has, adds one because one heart has been added to his health (the upgrade add one more heart)
-            health += 1;
+
+                //define the values for the new scale
+                newScale = new Vector3(2f, 2f, 2f);
+
+                //changes the scale of the player
+                transform.localScale += newScale;
+                
+                //set the amount of hearts the character has, adds one because one heart has been added to his health (the upgrade add one more heart)
+                health += 1;
             }
         }
     }
