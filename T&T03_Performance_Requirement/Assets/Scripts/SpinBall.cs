@@ -8,7 +8,11 @@ public class SpinBall : MonoBehaviour
     //variable that makes reference to the gameobject that is going to be the parent of this gameObject
     public GameObject spinObject;
 
+    //speed of the fireball
     float fireSpeed = 4f;
+
+    //reference to the player's gameobject
+    public GameObject player;
 
     void Awake()
     {
@@ -44,7 +48,7 @@ public class SpinBall : MonoBehaviour
         transform.position += ball * Time.fixedDeltaTime;
 
 
-        //set position of the enemy, it constantly moves to the left
+        //set position of the fireball, it constantly moves to the right
 		Vector3 fireBall = new Vector3(1, 0f, 0f);
         transform.position += fireBall * fireSpeed * Time.fixedDeltaTime;
     }
@@ -54,6 +58,14 @@ public class SpinBall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        float positionCharacter = player.transform.position.x;
+
+        float positionFire = transform.position.x;
+
+        if(positionFire - positionCharacter >= 25)
+        {
+            Destroy(gameObject);
+        }
+
     }
 }

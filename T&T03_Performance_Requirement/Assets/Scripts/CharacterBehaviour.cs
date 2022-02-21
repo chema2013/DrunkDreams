@@ -125,16 +125,19 @@ public class CharacterBehaviour : MonoBehaviour
             //if the player has the upgrade they can perform the special movement/ shoot fireballs
             if (Input.GetKeyDown("e"))
             {
+                //everytime the player uses the upgrade, a firebal is sapwned
                GameObject ball = GameObject.FindWithTag("spinBall");
 
                float positionX = transform.position.x + 5f;
 
                float positionY = transform.position.y - 4f;
 
+               //defined the vector3 position using the player's position as reference
                Vector3 position = new Vector3(positionX, positionY, 0f);
 
             Instantiate(ball, position, Quaternion.identity); 
 
+            //print message
             Debug.Log("fire!");
             }
 

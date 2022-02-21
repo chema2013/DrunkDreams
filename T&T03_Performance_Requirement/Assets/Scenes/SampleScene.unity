@@ -568,6 +568,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spinObject: {fileID: 1987112969}
+  player: {fileID: 990717041}
 --- !u!1 &213799624
 GameObject:
   m_ObjectHideFlags: 0
