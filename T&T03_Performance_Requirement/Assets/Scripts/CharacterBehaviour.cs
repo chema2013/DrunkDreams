@@ -32,18 +32,18 @@ public class CharacterBehaviour : MonoBehaviour
     //variable to indicate if the player has the upgradeA
     bool hasUpgradeB;
 
-
+    //variable for new scale when picking upgrades
     private Vector3 newScale;
+
+    //array for hearts, show how many lives the player currently has
+    public GameObject[] hearts = new GameObject[2];
 
 
     //using the event Awake to define  the elements once the object is enable, at the start of the level
     void Awake()
     {
-        //spawns a heart sprite on top of the screen, showing the character's health
-        GameObject heart = GameObject.FindWithTag("heart");
-
-        Vector3 position = new Vector3(27, 15, 0);
-		Instantiate(heart, position, Quaternion.identity);
+        //enables the heart sprite in the ui, showing the character's health
+        hearts[0].SetActive(true);
 
         //set the amount of hearts the character has, adds one because one heart has been added to his health
         health += 1;
@@ -149,6 +149,9 @@ public class CharacterBehaviour : MonoBehaviour
                 Destroy(animations[1]);
                 Destroy(animations[0]);
                 animations[2].SetActive(true);
+
+                //disables first heart in the ui, showing that the player has no health
+                hearts[0].SetActive(false);
             }
 
             //if the player collected the upgrade
@@ -159,6 +162,9 @@ public class CharacterBehaviour : MonoBehaviour
                 //disables the other upgrades
                 hasUpgradeA = false;
                 hasUpgradeB = false;
+
+                //disables second heart in the ui, showing that the player has one lives
+                hearts[1].SetActive(false);
 
                 //prints a message saying that the player lost the upgrade
                 Debug.Log("You lost the upgrade");
@@ -241,6 +247,10 @@ public class CharacterBehaviour : MonoBehaviour
             //disables the  other upgrade, in case it was acquired
             hasUpgradeB = false;
 
+            //enables second heart in the ui, showing that the player has two lives
+            hearts[1].SetActive(true);
+
+            //prints message
             Debug.Log("picked up UpgradeA");
             
             //this happens if the player doesn't have another upgrade
@@ -270,6 +280,10 @@ public class CharacterBehaviour : MonoBehaviour
             //disables the  other upgrade, in case it was acquired
             hasUpgradeA = false;
 
+            //enables second heart in the ui, showing that the player has two lives
+            hearts[1].SetActive(true);
+
+            //prints message
             Debug.Log("picked up UpgradeB");
             
             //this happens if the player doesn't have another upgrade
