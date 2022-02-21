@@ -17,4 +17,5 @@ This README would normally document whatever steps are necessary to get your app
 ### Credits ###
 
 * Jose Maria Pardo
+* background sprite is from: https://wallpapercave.com/pixel-art-desktop-wallpapers
 * Supervised by: Kevin Hagen "T&T3" (WinterSemester 2021/22)
