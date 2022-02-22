@@ -38,6 +38,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\enemyA.cs" />
      <Compile Include="Assets\Scripts\UiMovement.cs" />
+     <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\Score.cs" />
      <Compile Include="Assets\Scripts\enemySpawn.cs" />
      <Compile Include="Assets\Scripts\enemyB.cs" />
@@ -47,7 +48,8 @@
      <Compile Include="Assets\Scripts\shockWave.cs" />
      <Compile Include="Assets\Scripts\explosion_behaviour.cs" />
      <Compile Include="Assets\Scripts\woodenPlatform.cs" />
-     <Compile Include="Assets\Scripts\MainMenu.cs" />
+     <Compile Include="Assets\Scripts\Credits.cs" />
+     <Compile Include="Assets\Scripts\screenShake.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.20f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

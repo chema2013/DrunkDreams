@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class shockWave : MonoBehaviour
 {
+    public screenShake shaker;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +16,9 @@ public class shockWave : MonoBehaviour
     {
         //makes the script a coroutine
         StartCoroutine(waiter());
+
+        //starts coroutine (screenshake)
+        StartCoroutine(shaker.Shake(.20f, .6f));
     }
 
     // Update is called once per frame

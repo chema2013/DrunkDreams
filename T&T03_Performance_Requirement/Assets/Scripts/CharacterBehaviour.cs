@@ -41,9 +41,20 @@ public class CharacterBehaviour : MonoBehaviour
     //creates a variable to store this gameobject's rigidbody
     private Rigidbody2D scale;
 
+    //variable to make sure if the player can make a certain attack
     bool canPerfomPunch;
 
+    //makes reference to the shockwave that must be enable once the player uses the upgrade B
     public GameObject destructionSphere;
+
+    //level to reload
+    public string reload;
+
+    //level for transition
+    public string nextLevel;
+
+
+
 
 
     //using the event Awake to define  the elements once the object is enable, at the start of the level
@@ -112,7 +123,8 @@ public class CharacterBehaviour : MonoBehaviour
         if(animations[3].activeSelf == true)
                 {
                     Debug.Log("dead");
-                    SceneManager.LoadScene(0);
+                    //reloads current level
+                    SceneManager.LoadScene(reload);
                 }
 
 
@@ -265,12 +277,15 @@ public class CharacterBehaviour : MonoBehaviour
         if(other.gameObject.CompareTag("end"))
         {
             Debug.Log("you reached the end!");
+            //loads next level
+            SceneManager.LoadScene(nextLevel);
         }
 
         //if the player collides with the deathGround object the level restarts
         if(other.gameObject.CompareTag("deathGround"))
         {
-            SceneManager.LoadScene(0);
+            //reloads current level
+            SceneManager.LoadScene(reload);
 
             //prints the phrase you died once the character died and the scene is reloaded
             Debug.Log("You died");
