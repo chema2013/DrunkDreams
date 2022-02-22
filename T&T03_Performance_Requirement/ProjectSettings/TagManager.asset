@@ -21,6 +21,7 @@ TagManager:
   - upgradeA
   - woodenPlatform
   - spinBall
+  - wave
   layers:
   - Default
   - TransparentFX

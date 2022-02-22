@@ -49,8 +49,8 @@ public class enemyB : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        //if the fireball hits the enemy, it gets destroyed
-        if(other.gameObject.CompareTag("spinBall"))
+        //if the fireball or shockwave hits the enemy, it gets destroyed
+        if(other.gameObject.CompareTag("spinBall")  || other.gameObject.CompareTag("wave"))
         {
             //it spawns the explosion animation on top of the enemy
             Vector3 fire = gameObject.transform.position;

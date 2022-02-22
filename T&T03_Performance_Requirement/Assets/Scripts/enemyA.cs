@@ -45,8 +45,9 @@ public class enemyA : MonoBehaviour
             Destroy(gameObject);
         }
 
-        //if the player hits the enemy by jumping on top of it, the enemy gets destroyed
-        if(other.gameObject.CompareTag("character"))
+        /*if the player hits the enemy by jumping on top of it, the enemy gets destroyed
+        Also happens if the shockwave hits this enemy */
+        if(other.gameObject.CompareTag("character") || other.gameObject.CompareTag("wave"))
         {
             //it spawns the explosion animation on top of the enemy
             Vector3 position = gameObject.transform.position;

@@ -210,7 +210,7 @@ public class CharacterBehaviour : MonoBehaviour
                 //if the player hits the ground while pressing the E key and can perform the attack
                 if (Input.GetKey("e") && canPerfomPunch == true)
                 {
-                  destructionSphere.SetActive(false);  
+                  destructionSphere.SetActive(true);  
                 }
             }
         }
