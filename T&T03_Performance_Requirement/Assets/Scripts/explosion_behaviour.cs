@@ -16,6 +16,7 @@ public class explosion_behaviour : MonoBehaviour
 
     void OnEnable()
     {
+        //plays sound once the gameobject is enable
         explosion.Play(0);
     }
 

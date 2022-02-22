@@ -53,6 +53,9 @@ public class CharacterBehaviour : MonoBehaviour
     //level for transition
     public string nextLevel;
 
+    //array with sounds to play
+    public AudioSource[] sounds;
+
 
 
 
@@ -145,6 +148,9 @@ public class CharacterBehaviour : MonoBehaviour
                Vector3 position = new Vector3(positionX, positionY, 0f);
 
             Instantiate(ball, position, Quaternion.identity); 
+
+            //plays blast sound
+            sounds[0].Play(0);
 
             //print message
             Debug.Log("fire!");
@@ -239,6 +245,9 @@ public class CharacterBehaviour : MonoBehaviour
 
                 //disables first heart in the ui, showing that the player has no health
                 hearts[0].SetActive(false);
+
+                //plays death sound
+                sounds[1].Play(0);
             }
 
             //if the player collected the upgrade
@@ -267,6 +276,9 @@ public class CharacterBehaviour : MonoBehaviour
 
                 //changes the scale of the player back to normal
                 transform.localScale += newScale;
+
+                //plays hurt sound
+                sounds[4].Play(0);
             }
         }
     }
@@ -284,6 +296,7 @@ public class CharacterBehaviour : MonoBehaviour
         //if the player collides with the deathGround object the level restarts
         if(other.gameObject.CompareTag("deathGround"))
         {
+            
             //reloads current level
             SceneManager.LoadScene(reload);
 
@@ -303,6 +316,9 @@ public class CharacterBehaviour : MonoBehaviour
             //since is the first screw it gives one point to the player
             points ++;
             Debug.Log("1 point");
+
+            //plays screws sound
+            sounds[3].Play(0);
         }
 
         //checks if the player has collected the second srew type (medium one)
@@ -314,6 +330,9 @@ public class CharacterBehaviour : MonoBehaviour
             //since is the first screw it gives five points to the player
             points += 5;
             Debug.Log("5 point");
+
+            //plays screws sound
+            sounds[3].Play(0);
         }
 
         //checks if the player has collected the second srew type (medium one)
@@ -325,6 +344,9 @@ public class CharacterBehaviour : MonoBehaviour
             //since is the first screw it gives ten points to the player
             points += 10;
             Debug.Log("10 point");
+
+            //plays screws sound
+            sounds[3].Play(0);
         }
 
 
@@ -354,6 +376,9 @@ public class CharacterBehaviour : MonoBehaviour
 
             //prints message
             Debug.Log("picked up UpgradeA");
+
+            //plays upgrade sound sound
+            sounds[2].Play(0);
             
             //this happens if the player doesn't have another upgrade
             if(health == 1)
@@ -393,6 +418,9 @@ public class CharacterBehaviour : MonoBehaviour
 
             //prints message
             Debug.Log("picked up UpgradeB");
+
+            //plays upgrade sound sound
+            sounds[2].Play(0);
             
             //this happens if the player doesn't have another upgrade
             if(health == 1)

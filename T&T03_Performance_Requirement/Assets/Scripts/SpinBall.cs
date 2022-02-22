@@ -27,7 +27,6 @@ public class SpinBall : MonoBehaviour
         
     }
 
-
     void FixedUpdate()
     {
 
