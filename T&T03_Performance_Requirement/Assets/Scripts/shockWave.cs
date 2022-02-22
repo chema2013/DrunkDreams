@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class shockWave : MonoBehaviour
 {
+    //variable for the object tthat is going to shake
     public screenShake shaker;
 
+    //variable for the sound that is going to be played
     public AudioSource punch;
     // Start is called before the first frame update
     void Start()
@@ -22,6 +24,7 @@ public class shockWave : MonoBehaviour
         //starts coroutine (screenshake)
         StartCoroutine(shaker.Shake(.20f, .6f));
 
+        //plays the explosion sound once this gameobject is enable
         punch.Play(0);
     }
 
