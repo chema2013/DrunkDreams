@@ -38,6 +38,9 @@ public class CharacterBehaviour : MonoBehaviour
     //array for hearts, show how many lives the player currently has
     public GameObject[] hearts = new GameObject[2];
 
+    //creates a variable to store this gameobject's rigidbody
+    private Rigidbody2D scale;
+
 
     //using the event Awake to define  the elements once the object is enable, at the start of the level
     void Awake()
@@ -52,7 +55,7 @@ public class CharacterBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        scale = GetComponent<Rigidbody2D> ();
     }
 
     // Using FixedUpdate to move the player before anything else happens in the game e.g. camera movement    
@@ -112,16 +115,6 @@ public class CharacterBehaviour : MonoBehaviour
         //checks if the has collected the upgrade A
         if(hasUpgradeA == true)
         {
-            //checks the health of the player and this happens if they didn't get another upgrade
-            if(health == 1)
-            {
-            //spawns a heart sprite on top of the screen, showing the character's health, this only happens if the character doesn't have a second heart
-            GameObject heart_ = GameObject.FindWithTag("heart");
-            
-            Vector3 position_ = new Vector3(20, 15, 0);
-            Instantiate(heart_, position_, Quaternion.identity);
-            }
-
             //if the player has the upgrade they can perform the special movement/ shoot fireballs
             if (Input.GetKeyDown("e"))
             {
@@ -142,6 +135,46 @@ public class CharacterBehaviour : MonoBehaviour
             }
 
         }
+
+
+
+        //checks if the has collected the upgrade B
+        if(hasUpgradeB == true)
+        {
+            //if the player has the upgrade they can perform the special movement/ shockwave
+            if (Input.GetKey("e") && isJumping == true)
+            {
+
+                //enables the punch sprite
+               animations[4].SetActive(true);
+
+               //disables any other animation that is currently playing
+               animations[0].SetActive(false);
+               animations[1].SetActive(false);
+
+               //changing the gravity scale so the character could fall faster and perform the special move
+               scale.gravityScale = 40;
+
+            //print message
+            Debug.Log("Punch!");
+            }
+
+            //if the player stops preesing the key e then the special movement is cancelled and the player starts the standing animation
+            if (Input.GetKeyUp("e") && isJumping == true)
+            {
+
+                //disables the punch sprite
+               animations[4].SetActive(false);
+
+               //when cancelling the movement the gravity scale goes back to normal
+               scale.gravityScale = 4;
+
+            //print message
+            Debug.Log("cancelled Punch");
+            }
+
+        }
+
     }
 
     //checks if the player has collided with another object
@@ -151,6 +184,12 @@ public class CharacterBehaviour : MonoBehaviour
         if(other.gameObject.CompareTag("ground") || other.gameObject.CompareTag("woodenPlatform"))
         {
             isJumping = false;
+
+            //disables the punch sprite
+            animations[4].SetActive(false);
+
+            //when the player in the ground the gravity scale goes back to normal
+            scale.gravityScale = 4;
         }
 
         //checks if the player hits an enemy
