@@ -46,6 +46,7 @@
      <Compile Include="Assets\Scripts\explosion_behaviour.cs" />
      <Compile Include="Assets\Scripts\woodenPlatform.cs" />
      <Compile Include="Assets\Scripts\shockWave.cs" />
+     <Compile Include="Assets\Scripts\enemySpawn.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.20f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
