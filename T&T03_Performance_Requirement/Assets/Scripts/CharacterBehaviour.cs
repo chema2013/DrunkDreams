@@ -56,7 +56,8 @@ public class CharacterBehaviour : MonoBehaviour
     //array with sounds to play
     public AudioSource[] sounds;
 
-
+    //variable to check if the player is currently jumping or on top of a platform with the ground tag
+    public static bool onGround;
 
 
 
@@ -120,6 +121,9 @@ public class CharacterBehaviour : MonoBehaviour
             gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, jump), ForceMode2D.Impulse);
             //checks if the player is currently jumping
             isJumping = true;
+
+            //confirms that the player is not in the ground
+            onGround = false;
         }
 
         //if the death animation is being played after losing every heart then the level is reloaded and print the text "dead"
@@ -211,7 +215,7 @@ public class CharacterBehaviour : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other)
     {
         //turns the jumping bool to false when the character has landed
-        if(other.gameObject.CompareTag("ground") || other.gameObject.CompareTag("woodenPlatform"))
+        if(other.gameObject.CompareTag("ground") || other.gameObject.CompareTag("woodenPlatform") || other.gameObject.CompareTag("trigger"))
         {
             isJumping = false;
 
@@ -231,6 +235,12 @@ public class CharacterBehaviour : MonoBehaviour
                   destructionSphere.SetActive(true);  
                 }
             }
+        }
+
+        //when landing on the ground the wooden platforms are activated
+        if(other.gameObject.CompareTag("ground"))
+        {
+            onGround = true;
         }
 
         //checks if the player hits an enemy

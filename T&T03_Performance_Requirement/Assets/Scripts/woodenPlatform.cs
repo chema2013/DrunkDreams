@@ -16,10 +16,20 @@ public class woodenPlatform : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //check if the player is pressing the key "s" so the character could go throught the platform
-        if(Input.GetKeyDown("s"))
+
+        //gest the public static bool from the other script
+        bool trigger = CharacterBehaviour.onGround;
+
+        //if the player presses the E key then the charcter can go through the wooden platform
+        if(Input.GetKey("s"))
         {
             platform[0].SetActive(false);
+        }
+
+        //if the player is on the ground the wooden platform is reactivated
+         if(trigger == true)
+        {
+            platform[0].SetActive(true);
         }
     }
 
@@ -37,11 +47,11 @@ public class woodenPlatform : MonoBehaviour
     //performs an action once an object leaves the trigger area
     void OnTriggerExit2D(Collider2D other)
     {
+
         //checks if the player has already left the trigger area and enables the collision gameobject that is on top of the platform
         if(other.gameObject.CompareTag("character"))
         {
             platform[0].SetActive(true);
-
         }
     }
 }

@@ -22,6 +22,7 @@ TagManager:
   - woodenPlatform
   - spinBall
   - wave
+  - trigger
   layers:
   - Default
   - TransparentFX
