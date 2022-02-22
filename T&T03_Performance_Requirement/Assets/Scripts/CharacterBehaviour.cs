@@ -12,7 +12,7 @@ public class CharacterBehaviour : MonoBehaviour
     float characterRun = 13f;
 
     //jump force applied to character when pressing space
-    float jump = 31f;
+    float jump = 27f;
 
     //is true if the character is jumping
     bool isJumping;
@@ -87,7 +87,7 @@ public class CharacterBehaviour : MonoBehaviour
             //Vector3 is define before adding it to the position of the player and adds the fastes value for the character "characterRun"
             Vector3 character = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);
             transform.position += character * characterRun * Time.fixedDeltaTime;
-
+            
             //making sure the correct animation is being played, by changing from the standing character to the runing animation
             animations[1].SetActive(true);
             animations[0].SetActive(false);
