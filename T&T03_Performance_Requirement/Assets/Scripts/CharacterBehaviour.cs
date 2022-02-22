@@ -41,6 +41,10 @@ public class CharacterBehaviour : MonoBehaviour
     //creates a variable to store this gameobject's rigidbody
     private Rigidbody2D scale;
 
+    bool canPerfomPunch;
+
+    public GameObject destructionSphere;
+
 
     //using the event Awake to define  the elements once the object is enable, at the start of the level
     void Awake()
@@ -155,6 +159,9 @@ public class CharacterBehaviour : MonoBehaviour
                //changing the gravity scale so the character could fall faster and perform the special move
                scale.gravityScale = 40;
 
+               //playeer can perform said attack
+               canPerfomPunch = true;
+
             //print message
             Debug.Log("Punch!");
             }
@@ -169,9 +176,14 @@ public class CharacterBehaviour : MonoBehaviour
                //when cancelling the movement the gravity scale goes back to normal
                scale.gravityScale = 4;
 
+               //player cannot perform this attack
+               canPerfomPunch = false;
+
             //print message
             Debug.Log("cancelled Punch");
             }
+
+
 
         }
 
@@ -190,6 +202,17 @@ public class CharacterBehaviour : MonoBehaviour
 
             //when the player in the ground the gravity scale goes back to normal
             scale.gravityScale = 4;
+
+
+            //checks if the has collected the upgrade B
+            if(hasUpgradeB == true)
+            {
+                //if the player hits the ground while pressing the E key and can perform the attack
+                if (Input.GetKey("e") && canPerfomPunch == true)
+                {
+                  destructionSphere.SetActive(false);  
+                }
+            }
         }
 
         //checks if the player hits an enemy
