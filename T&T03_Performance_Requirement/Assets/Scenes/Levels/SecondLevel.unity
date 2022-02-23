@@ -1874,9 +1874,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingLayerID: 1189076085
+  m_SortingLayer: 1
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: 4e5d19acf13ebb543b86a57f7e734dbd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5600,7 +5600,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8387573826557302159, guid: 20d5e4efb7c7e16458cca13116f93caf, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -79
+      value: -49.199997
       objectReference: {fileID: 0}
     - target: {fileID: 8387573826557302159, guid: 20d5e4efb7c7e16458cca13116f93caf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -6888,7 +6888,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6173636706131323012, guid: f5a82450e70256f44acad98e6b2fb147, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -42
+      value: -12.2
       objectReference: {fileID: 0}
     - target: {fileID: 6173636706131323012, guid: f5a82450e70256f44acad98e6b2fb147, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -12067,7 +12067,7 @@ GameObject:
   - component: {fileID: 760082838}
   - component: {fileID: 760082837}
   - component: {fileID: 760082836}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17787,7 +17787,7 @@ GameObject:
   - component: {fileID: 1231812601}
   - component: {fileID: 1231812603}
   - component: {fileID: 1231812602}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28733,9 +28733,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingLayerID: 1189076085
+  m_SortingLayer: 1
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: 4e5d19acf13ebb543b86a57f7e734dbd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

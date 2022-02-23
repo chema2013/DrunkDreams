@@ -72,6 +72,9 @@ public class CharacterBehaviour : MonoBehaviour
 
         //set the amount of hearts the character has, adds one because one heart has been added to his health
         health += 1;
+
+        //everytime the scene is loaded the score is reset
+        points = 0;
     }
 
     // Start is called before the first frame update
