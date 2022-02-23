@@ -282,7 +282,7 @@ public class CharacterBehaviour : MonoBehaviour
                 Debug.Log("You lost the upgrade");
 
                  //define the values for the new scale
-                newScale = new Vector3(-1f, -1f, -1f);
+                newScale = new Vector3(-0.5f, -0.5f, -0.5f);
 
                 //changes the scale of the player back to normal
                 transform.localScale += newScale;
@@ -395,7 +395,7 @@ public class CharacterBehaviour : MonoBehaviour
             {
 
                 //define the values for the new scale
-                newScale = new Vector3(1f, 1f, 1f);
+                newScale = new Vector3(0.5f, 0.5f, 0.5f);
 
                 //changes the scale of the player
                 transform.localScale += newScale;
@@ -437,7 +437,7 @@ public class CharacterBehaviour : MonoBehaviour
             {
 
                 //define the values for the new scale
-                newScale = new Vector3(1f, 1f, 1f);
+                newScale = new Vector3(0.5f, 0.5f, 0.5f);
 
                 //changes the scale of the player
                 transform.localScale += newScale;
