@@ -5,26 +5,14 @@ using UnityEngine;
 public class SpinBall : MonoBehaviour
 {
 
-    //variable that makes reference to the gameobject that is going to be the parent of this gameObject
-    public GameObject spinObject;
-
     //speed of the fireball
     float fireSpeed = 4f;
 
-    //reference to the player's gameobject
-    public GameObject player;
 
-    void Awake()
+    void OnEnable()
     {
-        //changed the parent of every heart that will be spawned
-        gameObject.transform.parent = spinObject.transform;
-    }
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+        //makes the script a coroutine
+        StartCoroutine(waiter());
     }
 
     void FixedUpdate()
@@ -57,14 +45,17 @@ public class SpinBall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float positionCharacter = player.transform.position.x;
-
-        float positionFire = transform.position.x;
-
-        if(positionFire - positionCharacter >= 25)
-        {
-            Destroy(gameObject);
-        }
 
     }
+
+    //countdown to destroy the spinballs
+        IEnumerator waiter()
+{
+
+    //waits 3 second before making another action
+    yield return new WaitForSeconds(3);
+
+    //once the time is completed it destroys the object
+    Destroy(gameObject);
+}
 }

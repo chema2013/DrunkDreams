@@ -122,5 +122,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8653c1f15ce3b547b639a858423b51f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spinObject: {fileID: 0}
-  player: {fileID: 0}
+  spinObject: {fileID: 2393641880059750316, guid: 1bd5d836c8a28bf4689077530ee96579, type: 3}
+  player: {fileID: 5722927921424424724, guid: c5cd1d3aa3b3f4a47966812b88ed31fe, type: 3}

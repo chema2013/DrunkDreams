@@ -59,6 +59,9 @@ public class CharacterBehaviour : MonoBehaviour
     //variable to check if the player is currently jumping or on top of a platform with the ground tag
     public static bool onGround;
 
+    //variables for spinball prefab
+    public GameObject prefab;
+
 
 
     //using the event Awake to define  the elements once the object is enable, at the start of the level
@@ -141,9 +144,8 @@ public class CharacterBehaviour : MonoBehaviour
             //if the player has the upgrade they can perform the special movement/ shoot fireballs
             if (Input.GetKeyDown("e"))
             {
-                //everytime the player uses the upgrade, a firebal is sapwned
-               GameObject ball = GameObject.FindWithTag("spinBall");
 
+                //sets variables that will be used in the new vector3
                float positionX = transform.position.x + 5f;
 
                float positionY = transform.position.y - 4f;
@@ -151,7 +153,7 @@ public class CharacterBehaviour : MonoBehaviour
                //defined the vector3 position using the player's position as reference
                Vector3 position = new Vector3(positionX, positionY, 0f);
 
-            Instantiate(ball, position, Quaternion.identity); 
+            Instantiate(prefab, position, Quaternion.identity); 
 
             //plays blast sound
             sounds[0].Play(0);

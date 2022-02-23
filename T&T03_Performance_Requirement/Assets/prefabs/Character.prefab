@@ -94,6 +94,10 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   destructionSphere: {fileID: 5722927921500619313}
+  reload: 
+  nextLevel: 
+  sounds: []
+  prefab: {fileID: 5877991822816757762, guid: b628c7f919e0d9345bdefe632394587b, type: 3}
 --- !u!50 &5722927921424424721
 Rigidbody2D:
   serializedVersion: 4
@@ -180,6 +184,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dc5a6f2a10640945ab0144f695400e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shaker: {fileID: 0}
+  punch: {fileID: 0}
 --- !u!1 &5722927921678728419
 GameObject:
   m_ObjectHideFlags: 0
