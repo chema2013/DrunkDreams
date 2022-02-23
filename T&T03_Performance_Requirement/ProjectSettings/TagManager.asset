@@ -23,6 +23,7 @@ TagManager:
   - spinBall
   - wave
   - trigger
+  - death
   layers:
   - Default
   - TransparentFX
